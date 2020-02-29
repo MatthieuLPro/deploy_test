@@ -45,6 +45,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.1.7'
   gem 'capistrano-rvm', '~> 0.1.2'
   gem 'capistrano3-puma', github: "seuros/capistrano-puma"
+  gem 'capistrano-yarn'
 
   gem 'sshkit-sudo'
 end

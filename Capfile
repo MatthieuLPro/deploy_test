@@ -33,6 +33,7 @@ require "capistrano/puma"
 install_plugin Capistrano::Puma
 require "capistrano/puma/nginx"
 install_plugin Capistrano::Puma::Nginx
+require "capistrano/yarn"
 
 require 'sshkit/sudo'
 
