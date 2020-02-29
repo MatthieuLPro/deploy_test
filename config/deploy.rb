@@ -21,13 +21,16 @@ set :deploy_to, "/home/jack/deploy_test"
 set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, "config/database.yml", "config/secrets.yml", "config/master.key"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets"
 
 # Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+set :default_env, {
+	"RAILS_ENV" => "production",
+	"RZAILS_MASTER_KEY" => ENV["RAILS_MASTER_KEY"]
+}
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
