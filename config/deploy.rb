@@ -32,7 +32,7 @@ set :default_env, {
 	"RAILS_MASTER_KEY" => ENV["RAILS_MASTER_KEY"]
 }
 
-set :puma_workers = 1
+set :puma_workers, 1
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
