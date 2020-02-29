@@ -21,7 +21,7 @@ set :deploy_to, "/home/jack/deploy_test"
 set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, "config/database.yml", "config/secrets.yml", "config/credentials.yml.enc"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets"
@@ -31,6 +31,8 @@ set :default_env, {
 	"RAILS_ENV" => "production",
 	"RAILS_MASTER_KEY" => ENV["RAILS_MASTER_KEY"]
 }
+
+set :puma_workers = 1
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
